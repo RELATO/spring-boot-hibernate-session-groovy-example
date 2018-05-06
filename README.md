@@ -1,5 +1,26 @@
 # spring-boot-hibernate-example
 
+This project demonstrates how to use spring beans with hibernate session, hql, Criteria, etc
+
+The beauty is:
+
+@Transactional annotation instead of
+
+```
+    Transaction tx = null;
+    try {
+      
+      tx = session.beginTransaction();
+      session.flush();
+      tx.commit();
+    } catch (HibernateException he) {
+      if(tx != null){
+        tx.rollback();
+      } 
+      throw new HibernateException(he);
+    }
+```
+
 Source:
 http://www.devglan.com/spring-boot/spring-boot-hibernate-5-example
 
