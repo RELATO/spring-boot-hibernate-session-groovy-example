@@ -53,7 +53,7 @@ public class ApplicationRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
 
-
+//
 //        UserDetails newUser = new UserDetails();
 //        newUser.setId(0);
 //        newUser.setEmail("junior3.quiescente@gmail.com");
@@ -61,12 +61,12 @@ public class ApplicationRunner implements CommandLineRunner {
 //        newUser.setLastName("Quiescente3");
 //        newUser.setPassword("lalalaki3");
 //        userService.add(newUser);
-
-        List<UserDetails> userDetails = userService.getUserDetails();
-
-        for (UserDetails user : userDetails) {
-            System.out.println(user.getFirstName());
-        }
+//
+//        List<UserDetails> userDetails = userService.getUserDetails();
+//
+//        for (UserDetails user : userDetails) {
+//            System.out.println(user.getFirstName());
+//        }
 
 
         Resource res = resourceLoader.getResource("classpath:Hello.groovy");
@@ -87,7 +87,7 @@ public class ApplicationRunner implements CommandLineRunner {
 //        }
 
 
-//
+
 //        GroovyScriptProvider gse = new GroovyScriptProvider("src/main/resources");
 //        gse.setVariable("result", 0);
 //        gse.executeScript("firsttest.groovy");
@@ -103,14 +103,14 @@ public class ApplicationRunner implements CommandLineRunner {
 //        System.out.println("VALUE => " + value);
 
 
-//        String formula = "println 'Hello World!';po = '9s00';return (a * b);";
-//        Map<String,Object> map = new HashMap<String,Object>();
-//        map.put("a", 900);
-//        map.put("b", 10);
-//        GroovyScriptEngine groovyScriptEngine = new GroovyScriptEngine();
-//        Object value = groovyScriptEngine.executeObject(formula, map);
-//        System.out.println(value);
-//        System.out.println(groovyScriptEngine.binding.getVariable("po"));
+        String formula = "println 'Hello World!';po = '9s00';return (a * b);";
+        Map<String,Object> map = new HashMap<String,Object>();
+        map.put("a", 900);
+        map.put("b", 10);
+        GroovyScriptEngine groovyScriptEngine = new GroovyScriptEngine();
+        Object value = groovyScriptEngine.executeObject(formula, map);
+        System.out.println(value);
+        System.out.println(groovyScriptEngine.binding.getVariable("po"));
 
 
         exit(0);
